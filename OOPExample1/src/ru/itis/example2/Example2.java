@@ -24,7 +24,7 @@ public class Example2 {
         perchik.voice();
         iriska.voice();
 
-        System.out.println(dendy.isFriendlyTo(perchik));
-        System.out.println(dendy.getHumanAge());
+        System.out.println(perchik.isFriendlyTo(dendy));
+        System.out.println(iriska.getHumanAge());
     }
 }
