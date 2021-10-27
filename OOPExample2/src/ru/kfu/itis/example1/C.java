@@ -4,7 +4,7 @@ class C extends B {
     int y;
 
     C() {
-        super(20);
+        super();
         y = 50;
         System.out.println("Constructor C");
     }
