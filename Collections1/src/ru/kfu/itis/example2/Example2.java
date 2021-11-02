@@ -1,5 +1,6 @@
 package ru.kfu.itis.example2;
 
+// Типы: примитивные, ссылочные простые, ссылочные
 public class Example2 {
     static void setXTo20(A link2) {
         link2 = new A();
