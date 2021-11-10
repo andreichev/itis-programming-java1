@@ -16,12 +16,12 @@ public class MyListOptimized<T> implements MyList<T> {
             arraySize = afterSize;
             System.out.println("Пересоздание массива! Новый размер: " + afterSize);
 
-            Object[] beforeArray = new String[beforeSize];
+            Object[] beforeArray = new Object[beforeSize];
             for (int i = 0; i < beforeSize; i++) {
                 beforeArray[i] = elements[i];
             }
 
-            elements = new String[afterSize];
+            elements = new Object[afterSize];
             for (int i = 0; i < beforeSize; i++) {
                 elements[i] = beforeArray[i];
             }

@@ -10,5 +10,8 @@ public class Example1 {
         A a = new A();
         a.x = 20;
         System.out.println(a);
+        // Object b = a;
+        // String str = b.toString();
+        // System.out.println(str);
     }
 }

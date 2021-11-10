@@ -1,9 +1,9 @@
 package ru.kfu.itis.example1;
 
-//     A  B  C
-// f1  -  +  +
-// f2  -  -  +
-// f3  -  +  +
+//     A (abstract)  B (abstract)  C
+// f1  -             +             -
+// f2  -             -             +
+// f3  -             +             -
 
 public class C extends B {
     @Override
