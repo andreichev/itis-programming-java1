@@ -1,4 +1,4 @@
-package com.itis.oopexample.example3;
+package com.itis.oopexample.example4;
 
 public class Events {
     public KeyEvent handler;
