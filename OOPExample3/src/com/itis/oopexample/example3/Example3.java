@@ -27,7 +27,9 @@ public class Example3 {
             }
         };
 
-        Pet[] pets = { cat, dog };
+        Pet hamster = new Hamster();
+
+        Pet[] pets = { cat, dog, hamster };
 
         for (int i = 0; i < pets.length; i++) {
             pets[i].voice();
