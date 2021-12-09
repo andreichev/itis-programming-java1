@@ -1,7 +1,5 @@
 package ru.itis.simpleprograms;
 
-import java.util.Scanner;
-
 public class Sandbox {
     static int countN(int x) {
         int counterDigits = 0;
@@ -26,10 +24,7 @@ public class Sandbox {
     static boolean isInAnyString(int number, int[][] matrix) {
         int[] digits = breaking(number);
         for(int row = 0; row < matrix.length; row++) {
-            if(digits.length > matrix[row].length) {
-                return false;
-            }
-            if(isInString(digits, matrix[row])) {
+            if(findInString(digits, matrix[row]) != -1) {
                 return true;
             }
         }
@@ -37,11 +32,24 @@ public class Sandbox {
     }
 
     static boolean isInAnyColumn(int number, int[][] matrix) {
-
+        int[] digits = breaking(number);
+        int maxString = 0;
+        for(int row = 0; row < matrix.length; row++) {
+            if(maxString < matrix[row].length) {
+                maxString = matrix[row].length;
+            }
+        }
+        for(int column = 0; column < maxString; column++) {
+            int[] string = columnToString(matrix, column);
+            if(findInString(digits, string) != -1) {
+                return true;
+            }
+        }
+        return false;
     }
 
-    static boolean isInString(int[] s, int[] t) {
-        for(int i = 0; i < t.length - s.length; i++) {
+    static int findInString(int[] s, int[] t) {
+        for(int i = 0; i <= t.length - s.length; i++) {
             boolean allCorrect = true;
             for(int j = 0; j < s.length; j++) {
                 if(t[i + j] != s[j]) {
@@ -50,23 +58,46 @@ public class Sandbox {
                 }
             }
             if(allCorrect) {
-                return true;
+                return i;
             }
         }
-        return false;
+        return -1;
+    }
+
+    static int[] columnToString(int[][] array, int n) {
+        int[] result = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            if(array[i].length <= n) {
+                result[i] = -1;
+            } else {
+                result[i] = array[i][n];
+            }
+        }
+        return result;
+    }
+
+    static boolean task(int[] numbers, int[][] digits) {
+        for(int i = 0; i < numbers.length - 1; i++) {
+            if(isInAnyString(numbers[i], digits)
+                    && isInAnyColumn(numbers[i + 1], digits) == false) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
         int[] numbers = new int[]{11, 123, 33};
         int[][] digits = new int[][]{
-                {1, 1, 0},
-                {2, 0, 0},
-                {3, 0, 3},
-                {1, 2, 3}
+                {1, 1, 4},
+                {7, 9, 4},
+                {7, 9, 4}
         };
 
-        int i = findInString(new int[] {22, 33}, new int[] {1, 2, 32, 1, 22, 33, 12, 2});
-        System.out.println(i);
+        if(task(numbers, digits)) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
     }
 }
