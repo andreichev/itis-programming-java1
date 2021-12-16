@@ -1,4 +1,4 @@
-package ru.itis.simpleprograms;
+package ru.itis.simpleprograms.task1;
 
 public class Sandbox {
     static int countN(int x) {
