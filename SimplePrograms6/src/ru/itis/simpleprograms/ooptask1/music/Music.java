@@ -32,5 +32,10 @@ public abstract class Music implements Art {
         return name;
     }
 
+    @Override
+    public Person getAuthor() {
+        return author;
+    }
+
     public abstract String getDescription();
 }

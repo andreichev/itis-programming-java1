@@ -7,7 +7,9 @@ public class OOPTask {
     public static void main(String[] args) {
         Person joseph = new Person("Joseph Cosmo", "Israel");
         Jazz autumnLeaves = new Jazz("Leaves", 5, joseph, "", "Cosmo music");
-        joseph.setArts(new Art[]{autumnLeaves});
+        joseph.setArts(new Art[]{ autumnLeaves });
+
+        System.out.println(autumnLeaves.getAuthor().getArts()[0].getAuthor().getArts()[0].getAuthor().getName());
 
         System.out.println(autumnLeaves.getDescription());
     }

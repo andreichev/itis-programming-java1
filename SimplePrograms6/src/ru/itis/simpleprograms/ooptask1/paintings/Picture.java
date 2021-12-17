@@ -11,4 +11,9 @@ public class Picture implements Art {
     public String getName() {
         return name;
     }
+
+    @Override
+    public Person getAuthor() {
+        return author;
+    }
 }
