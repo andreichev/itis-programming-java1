@@ -9,9 +9,9 @@ public class Task836Acmp {
         return ((x / 64) % 8) % 2 == 1;
     }
 
-    static void sort(long[] array) {
-        for (int i = 0; i < array.length; i++) {
-            for (int j = i + 1; j < array.length; j++) {
+    static void sort(long[] array, int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
                 if(array[i] > array[j]) {
                     long t = array[i];
                     array[i] = array[j];
@@ -27,9 +27,6 @@ public class Task836Acmp {
         int counter = 0;
         long[] result = new long[n];
         for (int i = 0; i < n; i++) {
-            result[i] = Long.MAX_VALUE;
-        }
-        for (int i = 0; i < n; i++) {
             long x = scanner.nextInt();
             if (x % 2 != 0) {
                 continue;
@@ -40,7 +37,7 @@ public class Task836Acmp {
             }
         }
 
-        sort(result);
+        sort(result, counter);
         System.out.println(counter);
         for (int i = 0; i < counter; i++) {
             System.out.print(result[i] + " ");
