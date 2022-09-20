@@ -10,7 +10,7 @@ public class SwitchCase {
         } else if(exam.equals("Алгебра")) {
             System.out.println(exam + ": Арсланов М.М.");
         } else if(exam.equals("Дискретка")) {
-            System.out.println(exam + ": Зубков М.В.");
+            System.out.println(exam + ": Корнеева Н.Н.");
         }
 
         System.out.println("То же самое: ");
@@ -23,7 +23,7 @@ public class SwitchCase {
                 System.out.println(exam + ": Арсланов М.М.");
                 break;
             case "Дискретка":
-                System.out.println(exam + ": Зубков М.В.");
+                System.out.println(exam + ": Корнеева Н.Н.");
                 break;
         }
     }

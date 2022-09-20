@@ -2,7 +2,7 @@ package filmactors;
 
 public class FilmActors {
     public static void main(String[] args) {
-        String[][] actorNamesGroupedByChapters = new String[][] {
+        String[][] actorNamesGroupedByChapters = {
                 { "Vin Diesel", "Paul Walker","Michelle Rodriguez","Jordana Brewster" },
                 { "Paul Walker", "Tyrese Gibson", "Cole Hauser", "Eva Mendes" }
         };
