@@ -24,6 +24,7 @@ public class Task71AcmpV2 {
 
     static void func(int[] x) {
         sort(x);
+        print(x);
         if(x.length % 2 == 1) {
             int[] a = new int[x.length / 2 + 1];
             int j = 1;
@@ -33,7 +34,8 @@ public class Task71AcmpV2 {
                 j++;
             }
             if(a.length != 1) {
-                // print(a);
+                System.out.println("---");
+                print(a);
                 func(a);
             } else {
                 System.out.println(a[0]);
@@ -45,7 +47,8 @@ public class Task71AcmpV2 {
                 a[j] = x[i] - x[i - 1];
                 j++;
             }
-            // print(a);
+            System.out.println("---");
+            print(a);
             func(a);
         }
     }

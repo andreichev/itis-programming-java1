@@ -2,7 +2,7 @@ package task71_acmp_v1;
 
 import java.util.Scanner;
 
-public class Task71Acmp {
+public class Task71AcmpV1 {
     // 3
     // 1 13 14
     // 0
