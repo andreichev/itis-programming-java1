@@ -1,6 +1,6 @@
-package ru.itis.programs.sandbox;
+package ru.itis.programs.diskretka;
 
-public class Sandbox {
+public class Diskretka {
     static void print(boolean x) {
         System.out.print(x ? 1 : 0);
     }
