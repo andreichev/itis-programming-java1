@@ -1,11 +1,10 @@
 package ru.kfu.itis.example1;
 
-class C extends B {
-    int y;
+public class C extends B {
+    int z;
 
-    C() {
-        super();
-        y = 50;
-        System.out.println("Constructor C");
+    public C() {
+        this.z = 3;
+        System.out.println("Constructor C " + z);
     }
 }

@@ -1,8 +1,10 @@
 package ru.kfu.itis.example3;
 
+// Pigeon (FlyingBird (Bird))
+
 class Pigeon extends FlyingBird {
     @Override
-    public void printName() {
-        System.out.println("Pigeon");
+    String getName() {
+        return "Pigeon";
     }
 }

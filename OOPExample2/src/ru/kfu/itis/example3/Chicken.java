@@ -1,8 +1,8 @@
 package ru.kfu.itis.example3;
 
-public class Chicken implements Bird {
+public class Chicken extends Bird {
     @Override
-    public void printName() {
-        System.out.println("Chicken");
+    public String getName() {
+        return "Chicken";
     }
 }

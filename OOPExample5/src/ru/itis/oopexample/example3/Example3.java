@@ -4,8 +4,6 @@ package ru.itis.oopexample.example3;
 public class Example3 {
     public static void main(String[] args) {
         Tree birch = new Tree("Birch", 5);
-        birch.growUp();
-
-        System.out.println(birch.height);
+        System.out.println(birch);
     }
 }

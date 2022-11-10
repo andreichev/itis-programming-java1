@@ -13,7 +13,7 @@ public class Example3 {
 
         Pigeon object1 = new Pigeon();
         Bird object2 = object1;
-        object2.printName();
+        object2.fly();
 
         Bird[] array = {
                 new Pigeon(),
@@ -21,22 +21,28 @@ public class Example3 {
                 new Pigeon(),
                 new Chicken()
         };
-        for(Bird bird : array) {
-            bird.printName();
+        int count = 0;
+        for (Bird bird : array) {
+            if (bird instanceof FlyingBird) {
+                count++;
+            }
         }
+        System.out.println(count);
 
         Pigeon pigeon = new Pigeon();
         needBird(pigeon);
 
-        // Chicken chicken = new Chicken();
+        Chicken chicken = new Chicken();
         // needFlyingBird(chicken);
+
+        needFlyingBird(new Pigeon());
     }
 
     static void needFlyingBird(FlyingBird flying) {
-        flying.printName();
+        System.out.println(flying.getName() + " is Flying Bird");
+        flying.fly();
     }
 
     static void needBird(Bird b) {
-        b.printName();
     }
 }

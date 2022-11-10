@@ -10,8 +10,9 @@ public class Tree {
         this.name = name;
     }
 
-    void print() {
-        System.out.println("Tree, name: " + name + ", height: " + height);
+    @Override
+    public String toString() {
+        return "Tree, name: " + name + ", height: " + height;
     }
 
     void growUp() {
