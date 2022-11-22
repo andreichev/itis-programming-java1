@@ -5,8 +5,12 @@ public class Diskretka {
         System.out.print(x ? 1 : 0);
     }
 
+    // static boolean func(boolean x, boolean y, boolean z) {
+    //     return x != y || z;
+    // }
+
     static boolean func(boolean x, boolean y, boolean z) {
-        return x != y || z;
+        return x && y || z;
     }
 
     public static void main(String[] args) {

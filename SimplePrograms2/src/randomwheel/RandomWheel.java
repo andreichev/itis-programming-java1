@@ -8,10 +8,10 @@ public class RandomWheel {
         final String ANSI_YELLOW = "\u001B[33m";
         final String ANSI_BLUE = "\u001B[34m";
 
-        String[] positive = { "It is certain", "Yes" };
-        String[] possible = { "Most likely", "Outlook good" };
-        String[] neutral = { "Better not tell you now" };
-        String[] negative = { "Don’t count on it " };
+        String[] positive = { "Определенно", "Да" };
+        String[] possible = { "Скорее сего", "Звучит неплохо" };
+        String[] neutral = { "Лучше тебе не знать" };
+        String[] negative = { "Даже не рассчитывай" };
 
         String[] variantColor = { ANSI_BLUE, ANSI_GREEN, ANSI_YELLOW, ANSI_RED  };
         String[][] variants = { positive, possible, neutral, negative };

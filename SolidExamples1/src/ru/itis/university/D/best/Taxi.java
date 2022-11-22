@@ -1,6 +1,6 @@
 package ru.itis.university.D.best;
 
-public class Taxi implements ReachType{
+public class Taxi implements ReachType {
     @Override
     public void driveToSchool() {
         System.out.println("Выйди из дома");
