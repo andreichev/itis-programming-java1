@@ -37,7 +37,7 @@ public class VariantsDistributor {
         for (int i = 0; i < n; i++) {
             students[i] = scanner.nextLine();
         }
-        int variantsCount = 20;
+        int variantsCount = 25;
         int[] variants = new int[n];
         int counter = 1;
         for (int i = 0; i < n; i++) {
@@ -56,7 +56,7 @@ public class VariantsDistributor {
             return;
         }
         for (int i = 0; i < n; i++) {
-            out.println(students[i] + " " + variants[i]);
+            out.println(students[i] + ". Вариант " + variants[i]);
         }
         out.flush();
     }
