@@ -10,7 +10,7 @@ public class ExampleS {
         int width = 100;
         int height = 100;
 
-        Figure[] figures = new Figure[]{
+        Figure[] figures = new Figure[] {
                 Figure.makeCircle(20., 20., 80., '0'),
                 Figure.makeRect(10., 5., 30., 20., '#')
         };

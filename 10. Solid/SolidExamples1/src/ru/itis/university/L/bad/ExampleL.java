@@ -1,25 +1,20 @@
 package ru.itis.university.L.bad;
 
-import java.util.ArrayList;
-import java.util.List;
+import ru.itis.university.common.students.Student;
+import ru.itis.university.common.students.StudentRepositoryDBImpl;
+import ru.itis.university.common.students.StudentsRepository;
 
 // L - Liskov Substitution
 // Необходимо, чтобы подклассы могли бы служить заменой для своих суперклассов.
 
 public class ExampleL {
     public static void main(String[] args) {
-        List<Rectangle> rectangles = new ArrayList<>();
-
-        rectangles.add(new Rectangle(5, 10));
-        rectangles.add(new Rectangle(6, 10));
-        rectangles.add(new Square(6));
-
-        for(int i = 0; i < rectangles.size(); i++) {
-            rectangles.get(i).setWidth(10);
+        StudentsRepository repository = new StudentsCache();
+        for (int i = 0; i < 10; i++) {
+            Student student = repository.getStudentById(3L);
+            System.out.println(student);
         }
 
-        for(int i = 0; i < rectangles.size(); i++) {
-            System.out.println(rectangles.get(i).getSquare());
-        }
+        repository.saveStudent(new Student(4L, "Artur", "IOS"));
     }
 }
