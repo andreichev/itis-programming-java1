@@ -4,7 +4,7 @@ public enum AnswerVariant {
     POSITIVE(new String[] { "It is certain", "Yes" }, AnsiColor.BLUE),
     POSSIBLE(new String[] { "Most likely", "Outlook good" }, AnsiColor.GREEN),
     NEUTRAL(new String[] { "Better not tell you now" }, AnsiColor.YELLOW),
-    NEGATIVE(new String[] { "Don’t count on it " }, AnsiColor.RED)
+    NEGATIVE(new String[] { "Don’t count on it" }, AnsiColor.RED)
     ;
 
     public final String[] answers;
